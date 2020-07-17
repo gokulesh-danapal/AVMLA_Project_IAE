@@ -8,7 +8,7 @@ The code is summarised as follows:
   Jupyter notebook that was used for running these codes on google colab. It also contains code that writes text files based on the predictions of the YOLO network. This step is necessary to evaluate the model by calculating its mean Average Precision
 
 ### yoloV3.py:
-  Contains the yolo network implemented in tensorflow using keras API. It also contains the custom yolo loss function as defined by the creators. The network accepts inputs in the form of {None X 416 X 416 X no. of channels}. It outputs a three detections at small,medium and large scales. Each scale in turn has three tensors of the form { 1 X 13 X 13 X 3 X 4 } 
+  Contains the yolo network implemented in tensorflow using keras API. It also contains the custom yolo loss function as defined by the creators. The network accepts inputs in the form of {None X 416 X 416 X no. of channels}. It outputs a three detections at small,medium and large scales. Each scale in turn has three tensors of the form { None X 13 X 13 X 3 X 4 } 
   where:
   
         - 13 is the grid size for small scale detection. It is 26 and 52 for medium and large scale detections respectively.
