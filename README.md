@@ -13,13 +13,12 @@ The code is summarised as follows:
   
         - 13 is the grid size for small scale detection. It is 26 and 52 for medium and large scale detections respectively.
         - 3 is the number of anchors. In yolo boxes are detected as offsets pre-configured boxes called anchors.
-        - 8 is (4 +1+3) that is the Left, top, right and bottom coordinates of the box, confidence and class probabilities
-        
+        - 8 is  is the Left, top, right and bottom coordinates of the box
    The other two tensors are of the form { 1 X 13 X 13 X 3 X 1 } and { 1 X 13 X 13 X 3 X C }
     where 
     
           - 1 is the objectness score
-          - C is the number of classes
+          - C is the class probabbilities equal to the number of classes
 ### write_tf.py
   It writes tf records from dataset images, lidar points and annotations data. Additionally it also resizes images to (416 X 416) which is the input shape for yolo.
   
